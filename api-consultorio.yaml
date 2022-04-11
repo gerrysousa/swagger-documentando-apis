@@ -4,6 +4,13 @@ info:
   description: API para controlar médicos e suas especialidades dentro do consultório.
   version: 1.0.0
   termsOfService: https://github.com/gerrysousa/swagger-documentando-apis
+  contact:
+    name: Suporte a Devs
+    email: teste@gmail.com
+    url: https://github.com/gerrysousa/swagger-documentando-apis
+  license:
+    name: "Licença: GPLv3"
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
 externalDocs:
   description: Documentação da API
   url: https://github.com/gerrysousa/swagger-documentando-apis
