@@ -35,6 +35,28 @@ paths:
                       type: integer
                     description:
                       type: string
+    post:
+      summary: Cadastra uma especialidade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        201:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  description:
+                    type: string
   /especialidades/{id}:
     parameters:
     - name: id
@@ -62,6 +84,3 @@ paths:
             application/json:
               example: "Not found"
                     
-                    
-                    
-                   

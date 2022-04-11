@@ -34,6 +34,13 @@ Aprendemos a adicionar links sobre a API
 Adicionamos detalhes de contato e licença da API
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+Nesta aula, aprendemos:
+
+Aprendemos a definir um path, ou endpoint
+Vimos como definir as possíveis respostas de um path
+Aprendemos a definir parâmetros para uma requisição
+Vimos como definir o corpo da requisição
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
