@@ -14,3 +14,10 @@ info:
 externalDocs:
   description: Documentação da API
   url: https://github.com/gerrysousa/swagger-documentando-apis
+servers: 
+- url: https://6253fe5919bc53e23476c7eb.mockapi.io
+  description: API de Teste
+paths:
+  /especialidades:
+    get:
+      summary: Recupera todas as especialidades
