@@ -3,4 +3,7 @@ info:
   title: API de consultório
   description: API para controlar médicos e suas especialidades dentro do consultório.
   version: 1.0.0
-
+  termsOfService: https://github.com/gerrysousa/swagger-documentando-apis
+externalDocs:
+  description: Documentação da API
+  url: https://github.com/gerrysousa/swagger-documentando-apis
