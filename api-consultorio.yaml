@@ -121,8 +121,16 @@ paths:
                     type: string
 components:
   schemas:
-    Id:
-      type: integer
-      title: "Id"
-      description: "Identificador unico de um objeto"
-      minimum: 1
+    Especialidade: 
+      type: Object
+      properties:
+        id:
+          type: integer
+          title: "Id"
+          description: "Identificador unico de um objeto"
+          minimum: 1
+        descricao:
+          type: string
+          title: "Descricao"
+          description: "Nome de uma especialidade"
+    
