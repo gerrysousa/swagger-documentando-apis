@@ -97,6 +97,8 @@ paths:
                     type: integer
                   description:
                     type: string
+security: 
+- auth: []
 components:
   schemas:
     Especialidade: 

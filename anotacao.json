@@ -61,6 +61,22 @@ Autenticação por token é um conhecimento mais do que necessário quando se tr
 Autenticação por token: https://www.youtube.com/watch?v=MZetkcs2xIo
 Autenticação com JWT: https://www.youtube.com/watch?v=B-7e-ZpIWAs
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+posso definir a segurança por endpoint assim
+paths:
+  /especialidades:
+    get:
+      summary: Recupera todas as especialidades
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Especialidades"
+      security: 
+      - auth: []
+
+ou geral como está no aquivo api-consultorio.yaml
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
