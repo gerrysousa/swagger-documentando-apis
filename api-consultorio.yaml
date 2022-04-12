@@ -119,4 +119,10 @@ paths:
                     type: integer
                   description:
                     type: string
-                    
+components:
+  schemas:
+    Id:
+      type: integer
+      title: "Id"
+      description: "Identificador unico de um objeto"
+      minimum: 1
