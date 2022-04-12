@@ -115,4 +115,7 @@ components:
       type: array
       items: 
         $ref: "#/components/schemas/Especialidade"
-    
+  securitySchemes:
+    auth:
+      type: http
+      scheme: bearer
