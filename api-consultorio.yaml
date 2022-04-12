@@ -17,9 +17,18 @@ externalDocs:
 servers: 
 - url: https://6253fe5919bc53e23476c7eb.mockapi.io
   description: API de Teste
+
+tags:
+- name: especialidades
+  description: Tudo sobre especialidades
+  externalDocs:
+    description: Source code
+    url: https://github.com/gerrysousa/swagger-documentando-apis
 paths:
   /especialidades:
     get:
+      tags:
+      - especialidades
       summary: Recupera todas as especialidades
       responses:
         200:
@@ -29,6 +38,8 @@ paths:
               schema:
                 $ref: "#/components/schemas/Especialidades"
     post:
+      tags:
+      - especialidades
       summary: Cadastra uma especialidade
       requestBody:
         content:
@@ -53,6 +64,8 @@ paths:
         type: integer
       required: true
     get:
+      tags:
+      - especialidades
       summary: Recupera uma especialidade pelo ID
       responses:
         200:
@@ -67,6 +80,8 @@ paths:
             application/json:
               example: "Not found"
     put:
+      tags:
+      - especialidades
       summary: Atualiza uma especialidade
       requestBody:
         content:
@@ -84,6 +99,8 @@ paths:
               schema:
                  $ref: "#/components/schemas/Especialidade"
     delete:
+      tags:
+      - especialidades
       summary: Apaga uma especialidade
       responses:
         204:
