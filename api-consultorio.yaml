@@ -83,4 +83,40 @@ paths:
           content:
             application/json:
               example: "Not found"
+    put:
+      summary: Atualiza uma especialidade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        204:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  description:
+                    type: string
+    delete:
+      summary: Apaga uma especialidade
+      responses:
+        204:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  description:
+                    type: string
                     
