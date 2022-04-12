@@ -27,9 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items: 
-                  $ref: "#/components/schemas/Especialidade"
+                $ref: "#/components/schemas/Especialidades"
     post:
       summary: Cadastra uma especialidade
       requestBody:
@@ -113,4 +111,8 @@ components:
           type: string
           title: "Descricao"
           description: "Nome de uma especialidade"
+    Especialidades:
+      type: array
+      items: 
+        $ref: "#/components/schemas/Especialidade"
     
