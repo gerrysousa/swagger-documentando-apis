@@ -1,0 +1,124 @@
+openapi: 3.0.1
+info:
+  title: API de consultório
+  description: API para controlar médicos e suas especialidades dentro do consultório.
+  version: 1.0.0
+  termsOfService: https://github.com/gerrysousa/swagger-documentando-apis
+  contact:
+    name: Suporte a Devs
+    email: teste@gmail.com
+    url: https://github.com/gerrysousa/swagger-documentando-apis
+  license:
+    name: "Licença: GPLv3"
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+externalDocs:
+  description: Documentação da API
+  url: https://github.com/gerrysousa/swagger-documentando-apis
+servers: 
+- url: https://6253fe5919bc53e23476c7eb.mockapi.io
+  description: API de Teste
+paths:
+  /especialidades:
+    get:
+      summary: Recupera todas as especialidades
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Especialidades"
+    post:
+      summary: Cadastra uma especialidade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        201:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Especialidade"
+  /especialidades/{id}:
+    parameters:
+    - name: id
+      in: path
+      schema:
+        type: integer
+      required: true
+    get:
+      summary: Recupera uma especialidade pelo ID
+      responses:
+        200:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Especialidade"
+        404: 
+          description: Especialidade não encontrada
+          content:
+            application/json:
+              example: "Not found"
+    put:
+      summary: Atualiza uma especialidade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        204:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/Especialidade"
+    delete:
+      summary: Apaga uma especialidade
+      responses:
+        204:
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  description:
+                    type: string
+security: 
+- auth: []
+components:
+  schemas:
+    Especialidade: 
+      type: object
+      properties:
+        id:
+          type: integer
+          title: "Id"
+          description: "Identificador unico de um objeto"
+          minimum: 1
+        descricao:
+          type: string
+          title: "Descricao"
+          description: "Nome de uma especialidade"
+    Especialidades:
+      type: array
+      items: 
+        $ref: "#/components/schemas/Especialidade"
+  securitySchemes:
+    auth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

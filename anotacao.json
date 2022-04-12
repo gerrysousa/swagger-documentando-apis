@@ -85,6 +85,20 @@ Adicionamos autenticação a todos os endpoints
 Vimos como adicionar uma informação adiconar com bearerFormat
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+Para baixar acesse o site: https://swagger.io/
+Swagger Editor:
+https://swagger.io/tools/swagger-editor/
+
+download:
+Baixar diretamente no docker
+$ docker pull swaggerapi/swagger-editor
+
+Executar no docker:
+$ docker run -d -p 80:8080 swaggerapi/swagger-editor
+
+O swagger-editor vai estar disponivel no link: http://localhost/
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
